@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+
+ <Var name="baseUrl" value="http://www.ya.ru/"/>
+ <Var name="driver" value="FirefoxDriver()"/>
+ <!--#includeText path="TestData" regexp=".*\.xml"-->
+
+ <Scenarios>
+ 
+  <!--#includeText path="Scenarios" regexp=".*\.xml"-->
+
+ </Scenarios>
+</Data>
