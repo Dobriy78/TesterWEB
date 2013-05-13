@@ -4,6 +4,7 @@ public class Variable {
 	
 	 static String BaseUrl;
 	 static String Driver;
+	 static String ScenarioFileName;
 	    
 	    public String getBaseUrl()
 	    {
@@ -26,6 +27,18 @@ public class Variable {
 	    public void setDriver(String Driver)
 	    {
 	      Variable.Driver = Driver;
+	    //  System.out.println("Base url is: "+Driver);
+	    }
+	    
+	    public String getScenarioFileName()
+	    {
+	    //  System.out.println("Base url is: "+Driver);
+	      return ScenarioFileName;
+	    }
+	 
+	    public void setScenarioFileName(String ScenarioFileName)
+	    {
+	      Variable.ScenarioFileName = ScenarioFileName;
 	    //  System.out.println("Base url is: "+Driver);
 	    }
 	    

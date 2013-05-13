@@ -3,9 +3,7 @@
    <Var name="userCode" value="BNINIDJAAXXX"/>
    <Var name="userPass" value="1"/>
 
-    <Step operator="open1" target="target1" value="Value1"/>
-    <Step operator="open2" target="3000" value="Value2"/>
-    <Step operator="open3" target="Target3" value="Value3"/>
-    <Step operator="open4" target="Target4" value="Value4"/>
+    <Step operator="open1" target="http://www.ya.ru" value="1"/>
+
  
   </Scenario>

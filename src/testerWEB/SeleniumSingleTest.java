@@ -35,7 +35,7 @@ public class SeleniumSingleTest {
 	SeleniumCommands.Sleep(3000);
 	SeleniumCommands.TypeText(By.id("text"),"Hello!", driver);
 	SeleniumCommands.Click(By.xpath("//input[@value='']"), driver);
-	SeleniumCommands.Sleep(3000);
+	SeleniumCommands.Sleep(30000);
   }
 
   @After
