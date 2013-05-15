@@ -2,9 +2,10 @@ package testerWEB;
 
 import java.io.File;
 
+import org.junit.internal.TextListener;
 import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
+/*import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;*/
 
 public class TesterWEB { 
 
@@ -52,11 +53,15 @@ public class TesterWEB {
 		System.out.println("This is scenario file, with name - " +name);
 		SAX2parser.MyParser(xmlFileName);
 		
-		Result result = JUnitCore.runClasses(SeleniumSingleTest.class);
+		 JUnitCore junit = new JUnitCore();
+		 junit.addListener(new TextListener(System.out));
+		 junit.run(SeleniumSingleTest.class);
+		
+/*		Result result = JUnitCore.runClasses(SeleniumSingleTest.class);
 		for (Failure failure : result.getFailures()) {
 	         System.out.println(failure.toString());
 	      }
-	      System.out.println(result.wasSuccessful());
+	      System.out.println(result.wasSuccessful());*/
 		
 		} else
 			
