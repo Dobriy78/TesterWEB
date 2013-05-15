@@ -16,7 +16,7 @@ public class TesterWEB {
 		}
 		if (args.length != 2){
 			System.out.println("Error: Yor mast send all parameters like TesterWEB Config and Scenario, or Batch name"); 
-			// Выход из программы
+			// exit from this
 			System.exit(0);
 			} else {
 					

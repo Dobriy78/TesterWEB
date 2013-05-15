@@ -17,7 +17,7 @@ public class SeleniumCommands {
 	public static void Open(String commandTarget, WebDriver driver) {
 		
 		driver.get(commandTarget);
-		SeleniumCommands.Sleep(2000);
+		//SeleniumCommands.Sleep(2000);
 /*		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
