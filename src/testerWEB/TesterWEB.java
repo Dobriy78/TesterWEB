@@ -51,7 +51,11 @@ public class TesterWEB {
 		String xmlFileName = ""+name+".xml";
 		if (testerScenarioFile.exists()) {
 		System.out.println("This is scenario file, with name - " +name);
-		SAX2parser.MyParser(xmlFileName);
+		Variable my = new Variable();
+		my.setScenarioFileName(xmlFileName);
+		System.out.println("Scenario File Name: "+my.getScenarioFileName());
+		
+		//SAX2parser.MyParser(xmlFileName);
 		
 		 JUnitCore junit = new JUnitCore();
 		 junit.addListener(new TextListener(System.out));

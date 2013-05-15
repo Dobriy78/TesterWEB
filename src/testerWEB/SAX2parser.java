@@ -87,20 +87,24 @@ public class SAX2parser extends DefaultHandler
 	    	System.out.println("Scenario name:   "+atts.getValue("name"));
 	    	System.out.println("Scenario speed:  "+atts.getValue("speed"));
 	    	System.out.println("Scenario repeat: "+atts.getValue("repeat"));
+	    	String ScenarioName = atts.getValue("name");
+			Variable my = new Variable();
+			my.setScenarioName(ScenarioName);
+			System.out.println("Scenario Name: "+my.getScenarioName());
 	    }
 	    if (qName.equals("Step")) {
 	    	System.out.println("Step operator:   "+atts.getValue("operator"));
-	    	String CommandName = atts.getValue("operator").toLowerCase();
+	    	String CommandName = atts.getValue("operator");//.toLowerCase();
 	    	System.out.println("Step target:     "+atts.getValue("target"));
-	    	String CommandTarget = atts.getValue("target");
+	   // 	String CommandTarget = atts.getValue("target");
 	    	System.out.println("Step value:      "+atts.getValue("value"));
-	    	String CommandValue = atts.getValue("value");
-	    	SeleniumCommands.MyCommand(CommandName,CommandTarget,CommandValue);
+	   // 	String CommandValue = atts.getValue("value");
+	    	//SeleniumCommands.MyCommand(CommandName,CommandTarget,CommandValue);
 	    	try {
 	    		Test myTestClass = new Test();
 	    		Class<?> TestClass = myTestClass.getClass();
 				method = TestClass.getMethod(CommandName, String.class, String.class);
-				method.invoke(TestClass, CommandTarget, CommandValue);
+				method.invoke(TestClass, atts.getValue("target"), atts.getValue("value"));
 				System.out.println("Public method found: " +method.toString());
 			} catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
 				// TODO Auto-generated catch block

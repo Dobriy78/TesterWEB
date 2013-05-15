@@ -5,6 +5,7 @@ public class Variable {
 	 static String BaseUrl;
 	 static String Driver;
 	 static String ScenarioFileName;
+	 static String ScenarioName;
 	    
 	    public String getBaseUrl()
 	    {
@@ -39,6 +40,18 @@ public class Variable {
 	    public void setScenarioFileName(String ScenarioFileName)
 	    {
 	      Variable.ScenarioFileName = ScenarioFileName;
+	    //  System.out.println("Base url is: "+Driver);
+	    }
+	    
+	    public String getScenarioName()
+	    {
+	    //  System.out.println("Base url is: "+Driver);
+	      return ScenarioName;
+	    }
+	 
+	    public void setScenarioName(String ScenarioName)
+	    {
+	      Variable.ScenarioName = ScenarioName;
 	    //  System.out.println("Base url is: "+Driver);
 	    }
 	    

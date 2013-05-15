@@ -3,7 +3,10 @@
    <Var name="userCode" value="BNINIDJAAXXX"/>
    <Var name="userPass" value="1"/>
 
-    <Step operator="open1" target="http://www.ya.ru" value="1"/>
-
+    <Step operator="Open" target="http://www.ya.ru/" value="Value1"/>
+    <Step operator="Sleep" target="3000" value="Value2"/>
+    <Step operator="TypeText" target="By.id('text')" value="Hello!"/>
+    <Step operator="Click" target="By.xpath('//input[@value='']')" value="Value4"/>
+    <Step operator="Sleep" target="3000" value="Value2"/>
  
   </Scenario>
